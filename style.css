@@ -1,9 +1,13 @@
-div#container {
-    display: flex;
-    justify-content: stretch;
+#container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;        /* fill horizontally */
+  height: 100vh;      /* fill vertically */
+  background-color: hsl(180 50% 90%);
+}
 
-    width: auto;
-    height: 100vh;
-
-    background-color: hsl(180 50 90);
+.parent {
+  flex: 1;            /* each child takes equal share of height */
+  width: 100%;        /* stretch to full width */
+  border: 1px solid #ccc; /* optional, just to see the divisions */
 }
