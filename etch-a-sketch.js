@@ -34,4 +34,6 @@ function createDivs(num)
     }
 }
 
-createDivs(6);
+let resolution = prompt("Resolution:");
+
+createDivs(resolution);
