@@ -1,0 +1,9 @@
+div#container {
+    display: flex;
+    justify-content: stretch;
+
+    width: auto;
+    height: 100vh;
+
+    background-color: hsl(180 50 90);
+}
