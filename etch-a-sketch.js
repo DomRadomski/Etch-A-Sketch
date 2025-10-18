@@ -18,6 +18,19 @@ function createDivs(num)
 
         container.appendChild(parent);  
 
+        parent.addEventListener('mouseover', e => {
+            if (e.target !== parent) { // Make sure we're not coloring the parent itself
+                const randomColor = `rgb(
+                    ${Math.floor(Math.random() * 256)},
+                    ${Math.floor(Math.random() * 256)},
+                    ${Math.floor(Math.random() * 256)}
+                )`;
+                e.target.style.backgroundColor = randomColor;
+            }
+        });
+
+
+
     }
 }
 
