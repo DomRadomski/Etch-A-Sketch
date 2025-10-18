@@ -1,13 +1,28 @@
 #container {
-  display: flex;
-  flex-direction: column;
-  width: 100%;        /* fill horizontally */
-  height: 100vh;      /* fill vertically */
-  background-color: hsl(180 50% 90%);
-}
+    display: flex;
+    flex-direction: column;
+    width: 100%;        /* fill horizontally */
+    height: 100vh;      /* fill vertically */
+    background-color: hsl(180 50% 90%);
+    }
 
 .parent {
-  flex: 1;            /* each child takes equal share of height */
-  width: 100%;        /* stretch to full width */
-  border: 1px solid #ccc; /* optional, just to see the divisions */
+    display: flex;
+    flex: 1;            /* each child takes equal share of height */
+    width: 100%;        /* stretch to full width */
+    border: 1px solid #ccc; /* optional, just to see the divisions */
+    }
+
+.child {
+    flex: 1;                /* each child takes equal width */
+    height: 100%;           /* fill parent's height */
+    border: 1px solid #ccc; /* optional, just to visualize */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* smooth effect */
+    }
+
+/* Hover effect */
+.child:hover {
+    transform: translateY(-4px); /* lift slightly */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* subtle shadow */
+    z-index: 1; /* ensures it appears above neighbors */
 }
